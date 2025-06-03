@@ -1,0 +1,682 @@
+/* Custom styles to complement Tailwind CSS */
+
+/* Global styles */
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #e2e8f0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode (default) */
+body.dark {
+    background-color: #0f172a; /* slate-900 */
+    color: #e2e8f0; /* slate-200 */
+}
+
+body.dark .form-container,
+body.dark .list-container,
+body.dark .analytics-container {
+    background-color: rgba(30, 41, 59, 0.5); /* slate-800/50 */
+    border-color: rgba(51, 65, 85, 0.5); /* slate-700/50 */
+}
+
+body.dark input,
+body.dark select,
+body.dark textarea {
+    background-color: #1e293b; /* slate-800 */
+    border-color: #334155; /* slate-700 */
+    color: #e2e8f0; /* slate-200 */
+}
+
+/* Light mode */
+body.light {
+    background-color: #f8fafc; /* slate-50 */
+    color: #1e293b; /* slate-800 */
+}
+
+body.light .form-container,
+body.light .list-container,
+body.light .analytics-container {
+    background-color: rgba(241, 245, 249, 0.7); /* slate-100/70 */
+    border-color: rgba(203, 213, 225, 0.5); /* slate-300/50 */
+}
+
+body.light input,
+body.light select,
+body.light textarea {
+    background-color: #f1f5f9; /* slate-100 */
+    border-color: #cbd5e1; /* slate-300 */
+    color: #1e293b; /* slate-800 */
+}
+
+body.light .text-slate-200 {
+    color: #1e293b; /* slate-800 */
+}
+
+body.light .text-slate-400 {
+    color: #475569; /* slate-600 */
+}
+
+body.light .text-slate-500 {
+    color: #64748b; /* slate-500 */
+}
+
+body.light .bg-slate-800\/50 {
+    background-color: rgba(241, 245, 249, 0.7); /* slate-100/70 */
+}
+
+body.light .bg-slate-900\/50 {
+    background-color: rgba(226, 232, 240, 0.7); /* slate-200/70 */
+}
+
+body.light .border-slate-700\/50 {
+    border-color: rgba(203, 213, 225, 0.5); /* slate-300/50 */
+}
+
+/* Chart colors for light mode */
+body.light .chart-container {
+    background-color: rgba(241, 245, 249, 0.7); /* slate-100/70 */
+}
+
+body.light canvas {
+    filter: brightness(0.9);
+}
+
+/* Card styles */
+.internship-card {
+    width: 100%;
+    max-width: 100%; /* Just to be safe */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.internship-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+/* Status badge colors with gradients */
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.status-applied {
+    background-color: rgba(99, 102, 241, 0.2);
+    color: #818cf8;
+}
+
+.status-interview {
+    background-color: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+}
+
+.status-offer {
+    background-color: rgba(16, 185, 129, 0.2);
+    color: #34d399;
+}
+
+.status-rejected {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+}
+
+/* Form styles */
+input, select, textarea {
+    transition: all 0.2s ease-in-out;
+    background-color: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+    transform: translateY(-1px);
+    background-color: rgba(30, 41, 59, 0.9);
+}
+
+/* Button styles */
+button[type="submit"] {
+    background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 8px rgba(99, 102, 241, 0.3);
+}
+
+#exportCsv {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#exportCsv:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 8px rgba(16, 185, 129, 0.3);
+}
+
+/* Delete button styles */
+.delete-btn {
+    transition: all 0.2s ease-in-out;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+}
+
+.delete-btn:hover {
+    background: linear-gradient(135deg, #991b1b 0%, #b91c1c 100%);
+    color: #fca5a5;
+    transform: translateY(-1px);
+}
+
+/* Status select styles */
+.status-select {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+    color: #e2e8f0;
+}
+
+.status-select:hover {
+    border-color: #6366F1;
+    transform: translateY(-1px);
+}
+
+/* Empty state animation */
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#emptyState {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Header styles */
+header h1 {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Container styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Form container styles */
+.form-container, .list-container {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Notes container */
+.notes-container {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Analytics Dashboard Styles */
+.analytics-container {
+    transition: all 0.3s ease-in-out;
+}
+
+.stat-card {
+    transition: all 0.3s ease-in-out;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+.chart-container {
+    min-height: 300px;
+    transition: background-color 0.3s ease;
+}
+
+.chart-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .internship-card {
+        margin: 0.5rem 0;
+        width: 100% !important;
+    }
+
+    .chart-container {
+        min-height: 250px;
+    }
+}
+
+/* Theme toggle button */
+#themeToggle {
+    transition: all 0.3s ease;
+}
+
+#themeToggle:hover {
+    background-color: #475569;
+}
+
+#themeToggle:active {
+    transform: scale(0.95);
+}
+
+/* Theme toggle button states */
+#themeToggle[aria-checked="true"] {
+    background-color: #4f46e5;
+}
+
+#themeToggle[aria-checked="true"] #themeIcon {
+    transform: translateX(1.25rem);
+}
+
+#themeToggle[aria-checked="true"] #themeIconPath {
+    color: #ffffff;
+}
+
+/* Light mode theme toggle */
+body.light #themeToggle {
+    background-color: #cbd5e1;
+}
+
+body.light #themeToggle:hover {
+    background-color: #94a3b8;
+}
+
+body.light #themeToggle[aria-checked="true"] {
+    background-color: #4f46e5;
+}
+
+body.light #themeIconPath {
+    color: #1e293b;
+}
+
+/* Platform success list styles */
+#platformSuccessList > div {
+    transition: transform 0.2s ease;
+}
+
+#platformSuccessList > div:hover {
+    transform: translateX(4px);
+}
+
+/* Settings Modal Styles */
+#settingsModal {
+    backdrop-filter: blur(4px);
+    transition: opacity 0.2s ease-in-out;
+}
+
+#settingsModal.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#settingsModal.flex {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Settings Button Hover Effect */
+#settingsButton:hover {
+    transform: rotate(30deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Settings Modal Animation */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#settingsModal.flex > div {
+    animation: modalFadeIn 0.2s ease-out;
+}
+
+/* Settings Checkbox Styles */
+input[type="checkbox"] {
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid #475569;
+    border-radius: 0.375rem;
+    background-color: #1e293b;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #4f46e5;
+    border-color: #4f46e5;
+}
+
+input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 0.4rem;
+    top: 0.2rem;
+    width: 0.4rem;
+    height: 0.7rem;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.3);
+}
+
+/* Settings Button Styles */
+#settingsButton {
+    transition: all 0.2s ease-in-out;
+}
+
+#settingsButton:hover {
+    background-color: #475569;
+}
+
+#settingsButton:active {
+    transform: scale(0.95);
+}
+
+/* Close Button Styles */
+#closeSettings {
+    transition: all 0.2s ease-in-out;
+}
+
+#closeSettings:hover {
+    transform: rotate(90deg);
+}
+
+/* Export and Clear Data Button Styles */
+#exportData, #clearData {
+    transition: all 0.2s ease-in-out;
+}
+
+#exportData:hover, #clearData:hover {
+    transform: translateY(-1px);
+}
+
+#exportData:active, #clearData:active {
+    transform: translateY(1px);
+}
+
+/* Ensure settings modal headings and labels are visible in both themes */
+body.light #settingsModal h3,
+body.light #settingsModal label {
+  color: #1e293b !important; /* slate-800 */
+}
+body.dark #settingsModal h3,
+body.dark #settingsModal label {
+  color: #e2e8f0 !important; /* slate-200 */
+}
+
+/* Light mode card styles */
+body.light .internship-card {
+    background: rgba(241, 245, 249, 0.7); /* slate-100/70 */
+    border-color: rgba(203, 213, 225, 0.5); /* slate-300/50 */
+}
+
+body.light .internship-card:hover {
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+/* Light mode status badges */
+body.light .status-badge {
+    background-color: rgba(241, 245, 249, 0.9); /* slate-100/90 */
+}
+
+body.light .status-applied {
+    background-color: rgba(99, 102, 241, 0.2);
+    color: #4f46e5; /* indigo-600 */
+}
+
+body.light .status-interview {
+    background-color: rgba(245, 158, 11, 0.2);
+    color: #d97706; /* amber-600 */
+}
+
+body.light .status-offer {
+    background-color: rgba(16, 185, 129, 0.2);
+    color: #059669; /* emerald-600 */
+}
+
+body.light .status-rejected {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #dc2626; /* red-600 */
+}
+
+/* Light mode form elements */
+body.light input:focus,
+body.light select:focus,
+body.light textarea:focus {
+    background-color: #ffffff;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+/* Light mode status select */
+body.light .status-select {
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    border-color: #cbd5e1;
+    color: #1e293b;
+}
+
+/* Light mode notes container */
+body.light .notes-container {
+    background: rgba(241, 245, 249, 0.7);
+    border-color: rgba(203, 213, 225, 0.5);
+}
+
+/* Light mode stat cards */
+body.light .stat-card {
+    background-color: rgba(241, 245, 249, 0.7);
+    border-color: rgba(203, 213, 225, 0.5);
+}
+
+/* Light mode chart container */
+body.light .chart-container {
+    background-color: rgba(241, 245, 249, 0.7);
+    border-color: rgba(203, 213, 225, 0.5);
+}
+
+/* Light mode settings modal */
+body.light #settingsModal > div {
+    background-color: #f8fafc;
+}
+
+body.light #settingsModal h2,
+body.light #settingsModal h3,
+body.light #settingsModal label,
+body.light #settingsModal span {
+    color: #1e293b;
+}
+
+/* Light mode platform success list */
+body.light #platformSuccessList > div {
+    background-color: rgba(241, 245, 249, 0.7);
+    border-color: rgba(203, 213, 225, 0.5);
+}
+
+/* Light mode empty state */
+body.light #emptyState svg {
+    color: #94a3b8; /* slate-400 */
+}
+
+body.light #emptyState p {
+    color: #64748b; /* slate-500 */
+}
+
+/* Light mode header */
+body.light header h1 {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.light header p {
+    color: #64748b; /* slate-500 */
+}
+
+/* Light mode settings button */
+body.light #settingsButton {
+    background-color: #e2e8f0; /* slate-200 */
+    color: #1e293b; /* slate-800 */
+}
+
+body.light #settingsButton:hover {
+    background-color: #cbd5e1; /* slate-300 */
+}
+
+/* Light mode close button */
+body.light #closeSettings {
+    color: #64748b; /* slate-500 */
+}
+
+body.light #closeSettings:hover {
+    color: #1e293b; /* slate-800 */
+}
+
+/* Light mode export button */
+body.light #exportCsv {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    color: #ffffff;
+}
+
+/* Light mode delete button */
+body.light .delete-btn {
+    color: #64748b; /* slate-500 */
+}
+
+body.light .delete-btn:hover {
+    color: #dc2626; /* red-600 */
+}
+
+/* Light mode status select hover */
+body.light .status-select:hover {
+    border-color: #6366f1;
+    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+}
+
+/* Light mode chart text colors */
+body.light .chart-container h3 {
+    color: #1e293b; /* slate-800 */
+}
+
+/* Light mode monthly summary */
+body.light #monthlySummary {
+    color: #1e293b; /* slate-800 */
+    background-color: rgba(241, 245, 249, 0.7);
+    border-color: rgba(203, 213, 225, 0.5);
+}
+
+/* Light mode status categories */
+body.light .status-categories-container {
+    background-color: rgba(241, 245, 249, 0.7);
+    border-color: rgba(203, 213, 225, 0.5);
+}
+
+body.light .status-categories-container h2,
+body.light .status-categories-container h3 {
+    color: #1e293b; /* slate-800 */
+}
+
+body.light .status-categories-container .company-card {
+    background-color: rgba(241, 245, 249, 0.9);
+    border-color: rgba(203, 213, 225, 0.5);
+}
+
+body.light .status-categories-container .company-card p {
+    color: #1e293b; /* slate-800 */
+}
+
+/* Monthly summary box inside chart container */
+#monthlySummary {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    padding: 1.25rem 1.5rem;
+    border-radius: 1.25rem;
+    background: inherit;
+    box-shadow: none;
+    width: 100%;
+    box-sizing: border-box;
+    position: static;
+}
+
+.chart-container #monthlySummary {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 1.25rem;
+    background: inherit;
+    box-shadow: none;
+    width: 100%;
+    box-sizing: border-box;
+    position: static;
+}
+
+body.light #monthlySummary {
+    background-color: rgba(241, 245, 249, 0.7);
+    color: #1e293b;
+    border-radius: 1.25rem;
+    box-shadow: none;
+}
+
+body.dark #monthlySummary {
+    background-color: rgba(30, 41, 59, 0.7);
+    color: #e2e8f0;
+    border-radius: 1.25rem;
+    box-shadow: none;
+}
+
+/* Light mode form label and input text color fix */
+body.light label,
+body.light .form-container label,
+body.light .list-container label {
+    color: #1e293b !important;
+}
+body.light input,
+body.light select,
+body.light textarea {
+    color: #1e293b;
+}
+
