@@ -1,4 +1,4 @@
-# Internship Tracker
+# Internship Tracking System
 
 A modern, full-stack web application to help you manage and track your internship applications. Built with Node.js, Express, HTML, CSS (TailwindCSS), and JavaScript, this app provides a clean, responsive UI, dark/light mode, and insightful analytics to keep your job search organized and motivating.
 
